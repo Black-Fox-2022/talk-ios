@@ -24,6 +24,8 @@ import NextcloudKit
 import SafariServices
 import SDWebImage
 
+
+
 enum SettingsSection: Int {
     case kSettingsSectionUser = 0
     case kSettingsSectionUserStatus
