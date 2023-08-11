@@ -23,8 +23,7 @@ import UIKit
 import NextcloudKit
 import SafariServices
 import SDWebImage
-
-
+import SwiftUI
 
 enum SettingsSection: Int {
     case kSettingsSectionUser = 0
@@ -115,7 +114,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(userProfileImageUpdated), name: NSNotification.Name.NCUserProfileImageUpdated, object: nil)
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.adaptInterfaceForAppState(appState: NCConnectionController.sharedInstance().appState)
         tableView.reloadData()
     }
@@ -292,10 +291,20 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
 
     // MARK: User Status
 
-    func presentUserStatusOptions() {
+    /*func presentUserStatusOptions() {
         if let activeUserStatus = activeUserStatus {
             let viewController = UserStatusTableViewController(userStatus: activeUserStatus)
             self.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }*/
+    
+    // MARK: User Status (SwiftUI)
+
+    func presentUserStatusOptions() {
+        if let activeUserStatus = activeUserStatus {
+            let userStatusView = UserStatusSwiftUIView(userStatus: activeUserStatus)
+            let hostingController = UIHostingController(rootView: userStatusView)
+            self.present(hostingController, animated: true)
         }
     }
 

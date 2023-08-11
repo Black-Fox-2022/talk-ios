@@ -364,6 +364,9 @@
 		2CF8AD402A0010FB00A4D3E6 /* MessageTranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF8AD3E2A0010FB00A4D3E6 /* MessageTranslationViewController.xib */; };
 		2CF9CBFF26025F65002246EF /* TextInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF9CBFB26025F64002246EF /* TextInputTableViewCell.xib */; };
 		3FCA62550CD1442D28E8A7C6 /* libPods-NotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81BB7A4920C391CC2CACFD /* libPods-NotificationServiceExtension.a */; };
+		80893F9C2A86754200AE4EDF /* UserStatusMessageSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80893F9B2A86754200AE4EDF /* UserStatusMessageSwiftUI.swift */; };
+		80893F9E2A86759800AE4EDF /* UserStatusOptionsSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80893F9D2A86759800AE4EDF /* UserStatusOptionsSwiftUI.swift */; };
+		80893FA02A8675B500AE4EDF /* UserStatusSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80893F9F2A8675B500AE4EDF /* UserStatusSwiftUI.swift */; };
 		8789AE73BFCAA413B43319C0 /* libPods-ShareExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 684807120F4439797973DF73 /* libPods-ShareExtension.a */; };
 		9993261EDAC77481FF4EF58A /* libPods-NextcloudTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7C31E9D74F550EAF89931B /* libPods-NextcloudTalk.a */; };
 		DA1AEFC3270F1FA90088E519 /* DateLabelCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AEFC2270F1FA90088E519 /* DateLabelCustom.swift */; };
@@ -863,6 +866,9 @@
 		4F7C31E9D74F550EAF89931B /* libPods-NextcloudTalk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NextcloudTalk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		584BF273DF09DE4D5EE0DA0F /* Pods-ShareExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareExtension/Pods-ShareExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		684807120F4439797973DF73 /* libPods-ShareExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShareExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80893F9B2A86754200AE4EDF /* UserStatusMessageSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusMessageSwiftUI.swift; sourceTree = "<group>"; };
+		80893F9D2A86759800AE4EDF /* UserStatusOptionsSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusOptionsSwiftUI.swift; sourceTree = "<group>"; };
+		80893F9F2A8675B500AE4EDF /* UserStatusSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatusSwiftUI.swift; sourceTree = "<group>"; };
 		95D756208A81284B975853EC /* Pods-ShareExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareExtension/Pods-ShareExtension.release.xcconfig"; sourceTree = "<group>"; };
 		9B81BB7A4920C391CC2CACFD /* libPods-NotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DF51D976DC0F681FF83F7B /* Pods-NotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NotificationServiceExtension/Pods-NotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1311,6 +1317,8 @@
 				DA8801A127A2DA00009EF248 /* UserProfileTableViewController.swift */,
 				DA66582A27B6992F00B46B11 /* UserProfileTableViewController+AvatarSetup.swift */,
 				DA66582C27B6A73800B46B11 /* UserProfileTableViewController+DelegateMethods.swift */,
+				80893F9D2A86759800AE4EDF /* UserStatusOptionsSwiftUI.swift */,
+				80893F9F2A8675B500AE4EDF /* UserStatusSwiftUI.swift */,
 				DA66582E27B6B19C00B46B11 /* UserProfileTableViewController+Actions.swift */,
 				DA66583027B6B24E00B46B11 /* UserProfileTableViewController+Utils.swift */,
 				DA8801A327AC52AC009EF248 /* TextInputTableViewCell.swift */,
@@ -1320,6 +1328,7 @@
 				2C444701265D641300DF1DBC /* NCUserDefaults.h */,
 				2C444702265D641300DF1DBC /* NCUserDefaults.m */,
 				2CEDA88726F10BB20044552B /* UserStatusMessageViewController.swift */,
+				80893F9B2A86754200AE4EDF /* UserStatusMessageSwiftUI.swift */,
 				2CEDA88826F10BB20044552B /* UserStatusMessageViewController.xib */,
 			);
 			name = Settings;
@@ -2148,6 +2157,7 @@
 				2CB3041C2264775E0053078A /* SLKTextView+SLKAdditions.m in Sources */,
 				2C57CD8428C2255000B22E03 /* PollCreationViewController.swift in Sources */,
 				2CEDA88C26F492610044552B /* NSMutableAttributedString+Extensions.swift in Sources */,
+				80893FA02A8675B500AE4EDF /* UserStatusSwiftUI.swift in Sources */,
 				2C5BFBFB2891598A00E75118 /* PollResultTableViewCell.swift in Sources */,
 				1FA20C8A284001D80062B4F3 /* DebounceWebView.swift in Sources */,
 				2C4CDCD126A84E500023F403 /* ShareTableViewCell.m in Sources */,
@@ -2208,6 +2218,7 @@
 				2CC1FF4828183958009F7288 /* NCDeckCardParameter.m in Sources */,
 				2C3780BD2107209C003F9AE8 /* NCRoomParticipants.m in Sources */,
 				2CA1CCCD1F181741002FE6A2 /* NCUser.m in Sources */,
+				80893F9C2A86754200AE4EDF /* UserStatusMessageSwiftUI.swift in Sources */,
 				2CC007CA20E125C20096D91F /* NewRoomTableViewController.m in Sources */,
 				2CBF82B61FD0939600636459 /* NCAPISessionManager.m in Sources */,
 				2CF8AD3F2A0010FB00A4D3E6 /* MessageTranslationViewController.swift in Sources */,
@@ -2216,6 +2227,7 @@
 				1F90DA0429E9A28E00E81E3D /* AvatarManager.swift in Sources */,
 				2CC1FF4428147F11009F7288 /* RoomSharedItemsTableViewController.swift in Sources */,
 				2CC1C38629C0945700C8436B /* DRCellSlideGestureRecognizer.m in Sources */,
+				80893F9E2A86759800AE4EDF /* UserStatusOptionsSwiftUI.swift in Sources */,
 				1FB52E762842C75E00AC741B /* QRCodeLoginController.swift in Sources */,
 				2C4446D8265814D100DF1DBC /* ServerCapabilities.m in Sources */,
 				DA66582D27B6A73800B46B11 /* UserProfileTableViewController+DelegateMethods.swift in Sources */,
